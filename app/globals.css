@@ -3,8 +3,8 @@
 }
 
 html {
-  height: 100%;
   background-image: linear-gradient(#7e2fe9, #461198);
+  background-attachment: fixed;
 }
 
 body {
