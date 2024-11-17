@@ -1,23 +1,26 @@
 :root {
-  --text-color: #fcf7f8;
+  --color-light-1: #fcf7f8;
+  --color-light-2: #b5b5b5;
+  --color-light-3: #808080;
+  --color-links: #2ec0f9;
+  --color-dark-1: #121212;
+  --color-dark-2: #2e2e2e;
 }
 
 html {
-  background-image: linear-gradient(#7e2fe9, #461198);
-  background-attachment: fixed;
+  background-color: var(--color-dark-1);
 }
 
 body {
-  color: var(--text-color);
-
   /* text */
+  color: var(--color-light-1);
   font-size: 0.99em;
   line-height: 2;
   letter-spacing: 0.04em;
 
-  /* links color */
+  /* links */
   a {
-    color: rgb(46, 192, 249);
+    color: var(--color-links);
   }
 }
 
@@ -34,12 +37,12 @@ ul li {
   margin: 1.2em 0;
 
   /* bullet color */
-  color: grey;
+  color: var(--color-light-3);
 }
 
 li span {
   /* text color */
-  color: white;
+  color: var(--color-light-1);
 }
 
 /* sub lists */

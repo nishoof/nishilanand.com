@@ -1,0 +1,21 @@
+.me {
+    line-height: normal;
+    margin: 8px 0px;
+}
+
+.meLocation {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: var(--color-light-2);
+}
+
+.centeredDiv {
+    width: 800px;
+    margin: 50px auto;
+}
+
+.box {
+    border-radius: 16px;
+    outline: 1px solid var(--color-dark-2);
+}
