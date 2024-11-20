@@ -1,3 +1,4 @@
+import FeaturedProjects from "./components/FeaturedProjects";
 import Me from "./components/Me"
 import style from "./style.module.css"
 
@@ -9,14 +10,14 @@ export default function Home() {
             <Me />
 
             {/* TODO: finish featured projects component */}
-            {/* <FeaturedProjects /> */}
+            <FeaturedProjects />
 
             {/* Placeholder, delete later: */}
-            <h1>Featured Projects</h1>
+            {/* <h1>Featured Projects</h1>
             <ul>
                 <li><a href="https://github.com/nishoof/newsflash">Newsflash (3rd place at DEPLOY/24!)</a></li>
                 <li><a href="https://github.com/nishoof/elevator">Elevator Simulator</a></li>
-            </ul>
+            </ul> */}
         </div>
     );
 }
