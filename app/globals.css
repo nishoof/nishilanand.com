@@ -30,6 +30,10 @@ h2 {
   margin-bottom: 0em;
 }
 
+p {
+  line-height: 1.5;
+}
+
 /* lists */
 
 ul li {

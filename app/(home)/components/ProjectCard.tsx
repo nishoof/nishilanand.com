@@ -4,20 +4,14 @@ import style from "@/app/(home)/style.module.css"
 
 export default function ProjectCard({ projectName, projectDesc, backgroundImage, href }: { projectName: string, projectDesc: string, backgroundImage: string, href: string }) {
     const linkStyle = {
-        height: 400,
-        // backgroundImage: backgroundImage,
-        // backgroundSize: 'cover',
-        // backgroundPosition: 'center',
+        height: 500,
         display: "flex",
         flexFlow: "column",
         textDecoration: 'none',
-        color: 'var(--color-light-3)',
     };
 
-    // color: var(--color-dark-1);
-    // text-decoration: none;
     return (
-        <div className={style.box} style={{ marginBottom: '2em' }}>
+        <div className={style.box} style={{ marginBottom: '2em', overflow: "hidden" }}>
             <a style={linkStyle} href={href}>
                 <div style={{ position: 'relative', width: '100%', height: '100%' }}>
                     <Image
@@ -28,11 +22,11 @@ export default function ProjectCard({ projectName, projectDesc, backgroundImage,
                         style={{ zIndex: -1 }}
                     />
                 </div>
+                <div style={{ padding: 10 }}>
+                    <h2 style={{ color: 'var(--color-light-1)' }}>{projectName}</h2>
+                    <p style={{ margin: 0, color: 'var(--color-light-2)' }}>{projectDesc}</p>
+                </div>
             </a>
-            <div style={{ padding: 10 }}>
-                <h2>{projectName}</h2>
-                <p style={{ margin: 0 }}>{projectDesc}</p>
-            </div>
         </div>
     );
 }
