@@ -1,3 +1,3 @@
-import { Geist } from 'next/font/google';
+import { Geist } from "next/font/google";
 
-export const geistMono = Geist({ subsets: ['latin'] });
+export const geistMono = Geist({ subsets: ["latin"] });
