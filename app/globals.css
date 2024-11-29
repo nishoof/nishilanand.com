@@ -53,3 +53,8 @@ li span {
 ul li li {
   margin: 0.35em 0;
 }
+
+.centeredDiv {
+  width: 800px;
+  margin: 50px auto;
+}

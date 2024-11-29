@@ -5,14 +5,8 @@
 
 .meLocation {
     display: flex;
-    align-items: center;
     gap: 10px;
     color: var(--color-light-2);
-}
-
-.centeredDiv {
-    width: 800px;
-    margin: 50px auto;
 }
 
 .box {

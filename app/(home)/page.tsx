@@ -1,23 +1,37 @@
-import FeaturedProjects from "./components/FeaturedProjects";
-import Me from "./components/Me"
-import style from "./style.module.css"
+import style from "./style.module.css";
+import ConnectIcons from "./components/ConnectIcons";
+import Location from '@/app/(home)/components/Location';
+import ProjectCard from "./components/ProjectCard";
+import { featuredProjects } from "@/app/projects";
 
 export default function Home() {
     return (
-        <div className={style.centeredDiv}>
+        <div className={'centeredDiv'}>
             <p><i>Site is currently in development...</i></p>
 
-            <Me />
+            {/* Me */}
+            <div style={{ marginBottom: 20 }}>
+                <ConnectIcons />
+                <h1 className={style.me}>Nishil Anand</h1>
+                <Location />
+                <p className={style.me}>I&apos;m a student at the University of San Francisco majoring in Computer Science!</p>
+            </div>
 
-            {/* TODO: finish featured projects component */}
-            <FeaturedProjects />
-
-            {/* Placeholder, delete later: */}
-            {/* <h1>Featured Projects</h1>
-            <ul>
-                <li><a href="https://github.com/nishoof/newsflash">Newsflash (3rd place at DEPLOY/24!)</a></li>
-                <li><a href="https://github.com/nishoof/elevator">Elevator Simulator</a></li>
-            </ul> */}
+            {/* Featured Projects */}
+            <div>
+                <h1>Featured Projects</h1>
+                {
+                    featuredProjects.map((project, index) => (
+                        <ProjectCard
+                            key={index}
+                            projectName={project.name}
+                            projectDesc={project.desc}
+                            backgroundImage={project.image}
+                            href={project.link}
+                        />
+                    ))
+                }
+            </div>
         </div>
     );
 }
