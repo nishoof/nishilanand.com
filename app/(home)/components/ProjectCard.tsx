@@ -4,13 +4,12 @@ export default function ProjectCard({ projectName, projectDesc, backgroundImage,
   return (
     <div className={"box"} style={{ marginBottom: "2em", overflow: "hidden" }}>
       <a style={{ display: "flex", flexFlow: "column", textDecoration: "none" }} href={href}>
-        <div style={{ height: 400, position: "relative", backgroundColor: "transparent" }}>
+        <div style={{ aspectRatio: "2/1", position: "relative", backgroundColor: "transparent" }}>
           <Image
-            priority
             src={backgroundImage}
             alt={projectName}
-            layout="fill"
-            objectFit="cover"
+            fill
+            style={{ objectFit: "cover" }}
           />
         </div>
         <div style={{ padding: 20 }}>

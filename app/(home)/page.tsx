@@ -6,14 +6,10 @@ import { featuredProjects } from "@/app/projects";
 export default function Home() {
   return (
     <div className={"centeredDiv"}>
-      <div style={{ margin: "2em 0" }}>
-        <p style={{ color: "var(--color-light-1" }}><i>Site is currently in development...</i></p>
-      </div>
-
       {/* Me */}
       <div style={{ margin: "2em 0", lineHeight: "normal" }}>
         <ConnectIcons />
-        <h1 style={{ margin: "0.2em 0" }}>Nishil Anand</h1>
+        <h1 style={{ margin: "0.3em 0" }}>Nishil Anand</h1>
         <div style={{ margin: "0.3em 0" }}>
           <Location />
         </div>
