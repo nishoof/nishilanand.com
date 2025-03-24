@@ -9,7 +9,7 @@ interface ProjectCardProps {
 
 export default function ProjectCard({ projectName, projectDesc, media, redirect }: ProjectCardProps) {
   // Check if media is a valid file
-  const isVideo = media.endsWith('.mp4') || media.endsWith('.webm');
+  const isVideo = media.endsWith('.mp4');
   const isImage = media.endsWith('.png');
   if (!isVideo && !isImage)
     throw new Error('Media must be a .png or .mp4 file');
@@ -26,7 +26,7 @@ export default function ProjectCard({ projectName, projectDesc, media, redirect 
           priority
         />
       ) : (
-        <video width="100%" height="100%" autoPlay playsInline muted loop>
+        <video style={{ display: 'block', width: '100%', height: '100%', objectFit: 'cover' }} autoPlay playsInline muted loop>
           <source src={media} type="video/mp4" />
           Your browser does not support the video tag.
         </video>

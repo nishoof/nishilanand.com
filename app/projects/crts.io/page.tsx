@@ -9,16 +9,29 @@ export default function Crts() {
           {crtsProjectDetails.projectDesc}
         </p>
         <br></br>
-        <a href={crtsProjectDetails.githubLink} target="_blank" rel="noopener noreferrer">
+        <a href={crtsProjectDetails.githubLink} target="_blank" rel="noopener">
           GitHub Repo
         </a>
         <br></br>
         <br></br>
-        <a href="https://crts.nishilanand.com" target="_blank" rel="noopener noreferrer">
+        <a href="https://crts.nishilanand.com" target="_blank" rel="noopener">
           Play at crts.nishilanand.com
         </a>
       </div>
-      <iframe width="800" height="450" src="https://www.youtube.com/embed/FiHDix29qyU" allowFullScreen />
+      <div style={{ position: 'relative', paddingTop: '56.25%', marginTop: '2em' }}>
+        <iframe
+          style={{
+            position: 'absolute',
+            top: 0,
+            left: 0,
+            width: '100%',
+            height: '100%',
+            border: 'none',
+          }}
+          src="https://www.youtube.com/embed/FiHDix29qyU"
+          allowFullScreen
+        />
+      </div>
     </div>
   );
 }

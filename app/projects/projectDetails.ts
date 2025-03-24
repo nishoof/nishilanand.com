@@ -8,7 +8,7 @@ export interface ProjectDetails {
 export const crtsProjectDetails: ProjectDetails = {
     projectName: 'crts.io',
     projectDesc: 'A fast-paced racing and combat game with vehicle & character customization with a real-time competitive leaderboard. Used just HTML Canvas & TypeScript (no external libraries like React). Won 1st place at the BLOOM hackathon! Currently working on improving the game and adding new features.',
-    media: '/projectPreviews/crts.webm',
+    media: '/projectPreviews/crts.mp4',
     githubLink: 'https://github.com/nishoof/crts'
 }
 
