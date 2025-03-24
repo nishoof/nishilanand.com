@@ -1,8 +1,8 @@
 import ConnectIcons from '../components/ConnectIcons';
 import ProjectCard from '../components/ProjectCard';
-import { projectDetails as crtsProjectDetails } from './projects/crts.io/page';
-import { projectDetails as newsflashProjectDetails } from './projects/newsflash/page';
-import { projectDetails as elevatorProjectDetails } from './projects/elevator/page';
+import { crtsProjectDetails } from './projects/projectDetails';
+import { newsflashProjectDetails } from './projects/projectDetails';
+import { elevatorProjectDetails } from './projects/projectDetails';
 
 export default function Home() {
   return (
