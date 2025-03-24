@@ -4,10 +4,10 @@ interface ProjectCardProps {
   projectName: string;
   projectDesc: string;
   media: string;
-  href: string;
+  redirect: string;
 }
 
-export default function ProjectCard({ projectName, projectDesc, media, href }: ProjectCardProps) {
+export default function ProjectCard({ projectName, projectDesc, media, redirect }: ProjectCardProps) {
   // Check if media is a valid file
   const isVideo = media.endsWith('.mp4') || media.endsWith('.webm');
   const isImage = media.endsWith('.png');
@@ -26,28 +26,17 @@ export default function ProjectCard({ projectName, projectDesc, media, href }: P
           priority
         />
       ) : (
-        <video
-          src={media}
-          autoPlay
-          loop
-          muted
-          playsInline
-          style={{
-            width: '100%',
-            height: '100%',
-            objectFit: 'cover',
-            position: 'absolute',
-            top: 0,
-            left: 0
-          }}
-        />
+        <video width="100%" height="100%" autoPlay playsInline muted loop>
+          <source src={media} type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
       )}
     </div>
   )
 
   return (
     <div className={'box'} style={{ marginBottom: '2em', overflow: 'hidden' }}>
-      <a style={{ display: 'flex', flexFlow: 'column', textDecoration: 'none' }} href={href}>
+      <a style={{ display: 'flex', flexFlow: 'column', textDecoration: 'none' }} href={redirect}>
         {mediaDiv}
         <div style={{ padding: 20 }}>
           <div>

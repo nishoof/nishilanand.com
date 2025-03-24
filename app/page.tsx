@@ -1,5 +1,8 @@
 import ConnectIcons from '../components/ConnectIcons';
 import ProjectCard from '../components/ProjectCard';
+import { projectDetails as crtsProjectDetails } from './projects/crts.io/page';
+import { projectDetails as newsflashProjectDetails } from './projects/newsflash/page';
+import { projectDetails as elevatorProjectDetails } from './projects/elevator/page';
 
 export default function Home() {
   return (
@@ -15,22 +18,22 @@ export default function Home() {
       <div style={{ margin: '2em 0' }}>
         <h1>Projects</h1>
         <ProjectCard
-          projectName='crts.io'
-          projectDesc='A fast-paced racing and combat game with vehicle & character customization with a real-time competitive leaderboard. Used just HTML Canvas & TypeScript (no external libraries like React). Won 1st place at the BLOOM hackathon! Currently working on improving the game and adding new features.'
-          media='/projectCards/crts.webm'
-          href='https://github.com/nishoof/crts'
+          projectName={crtsProjectDetails.projectName}
+          projectDesc={crtsProjectDetails.projectDesc}
+          media={crtsProjectDetails.media}
+          redirect='projects/crts.io'
         />
         <ProjectCard
-          projectName='Newsflash'
-          projectDesc='A personalized AI summary of the daily news. Won 3rd place at the DEPLOY/24 hackathon!'
-          media='/projectCards/newsflash.png'
-          href='https://github.com/nishoof/newsflash'
+          projectName={newsflashProjectDetails.projectName}
+          projectDesc={newsflashProjectDetails.projectDesc}
+          media={newsflashProjectDetails.media}
+          redirect={newsflashProjectDetails.githubLink}
         />
         <ProjectCard
-          projectName='Elevator Simulator'
-          projectDesc='A game where you multitask to manage multiple elevators to deliver people to their floors on time. Upgrade your elevator to meet the demand, and make sure you drop people off before they run out of patience! Made 100% in Java.'
-          media='/projectCards/elevator.png'
-          href='https://github.com/nishoof/elevator'
+          projectName={elevatorProjectDetails.projectName}
+          projectDesc={elevatorProjectDetails.projectDesc}
+          media={elevatorProjectDetails.media}
+          redirect={elevatorProjectDetails.githubLink}
         />
       </div>
     </div>
