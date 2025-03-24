@@ -80,7 +80,7 @@ ul li li {
 
 .box:hover {
   background-color: var(--color-dark-2);
-  transform: translateY(-2px);
+  transform: translateY(-2px) scale(1.007);
   box-shadow: 0 8px 20px var(--color-shadow);
   transition: all 0.2s ease-in-out;
 }
