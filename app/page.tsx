@@ -17,7 +17,7 @@ export default function Home() {
         <ProjectCard
           projectName='crts.io'
           projectDesc='A fast-paced racing and combat game with vehicle & character customization with a real-time competitive leaderboard. Used just HTML Canvas & TypeScript (no external libraries like React). Won 1st place at the BLOOM hackathon! Currently working on improving the game and adding new features.'
-          media='/projectCards/crts demo2.webm'
+          media='/projectCards/crts.webm'
           href='https://github.com/nishoof/crts'
         />
         <ProjectCard
