@@ -1,4 +1,4 @@
-import Image from "next/image";
+import Image from 'next/image';
 
 // A single icon
 function ConnectIcon({ size, link, imageSrc, imageAlt }: { size: number, link: string, imageSrc: string, imageAlt: string }) {
@@ -21,7 +21,7 @@ function ConnectIcon({ size, link, imageSrc, imageAlt }: { size: number, link: s
   return (
     <div style={{ width: size, height: size }}>
       <a href={link}>
-        <div className="box" style={{ borderRadius: borderRadius, padding: padding, width: innerSize, height: innerSize }}>
+        <div className='box' style={{ borderRadius: borderRadius, padding: padding, width: innerSize, height: innerSize }}>
           <ThisIcon />
         </div>
       </a>
@@ -34,26 +34,26 @@ export default function ConnectIcons() {
   const iconSize = 40;
 
   return (
-    <div style={{ display: "flex", gap: 12 }}>
+    <div style={{ display: 'flex', gap: 12 }}>
       <ConnectIcon
         size={iconSize}
-        link="https://github.com/nishoof"
-        imageSrc="/images/connectIcons/github.svg"
-        imageAlt="GitHub"
+        link='https://github.com/nishoof'
+        imageSrc='/connect/github.svg'
+        imageAlt='GitHub'
       />
 
       <ConnectIcon
         size={iconSize}
-        link="https://linkedin.com/in/nishilanand/"
-        imageSrc="/images/connectIcons/linkedin.svg"
-        imageAlt="GitHub"
+        link='https://linkedin.com/in/nishilanand/'
+        imageSrc='/connect/linkedin.svg'
+        imageAlt='GitHub'
       />
 
       <ConnectIcon
         size={iconSize}
-        link="mailto:nishilanand21@gmail.com"
-        imageSrc="/images/connectIcons/mail.svg"
-        imageAlt="Mail"
+        link='mailto:nishilanand21@gmail.com'
+        imageSrc='/connect/mail.svg'
+        imageAlt='Mail'
       />
     </div>
   );
