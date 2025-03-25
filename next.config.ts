@@ -8,6 +8,11 @@ const nextConfig: NextConfig = {
         destination: '/',
         permanent: true,
       },
+      {
+        source: '/projects/crts',
+        destination: '/projects/crts.io',
+        permanent: true,
+      },
     ]
   },
 }

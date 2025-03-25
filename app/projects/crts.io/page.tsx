@@ -1,34 +1,27 @@
 import { crtsProjectDetails } from "../projectDetails";
+import Link from "next/link";
+import ExternalLink from "@/components/ExternalLink";
+import styles from "../projects.module.css";
 
 export default function Crts() {
   return (
-    <div className={'centeredDiv'}>
-      <div style={{ margin: '2em 0', lineHeight: 'normal' }}>
-        <h1 style={{ margin: '0.3em 0' }}>crts.io</h1>
-        <p style={{ margin: '0.3em 0' }}>
-          {crtsProjectDetails.projectDesc}
-        </p>
-        <br></br>
-        <a href={crtsProjectDetails.githubLink} target="_blank" rel="noopener">
-          GitHub Repo
-        </a>
-        <br></br>
-        <br></br>
-        <a href="https://crts.nishilanand.com" target="_blank" rel="noopener">
-          Play at crts.nishilanand.com
-        </a>
+    <div className="centeredDiv">
+      <div className={styles.backButton}>
+        <Link href="/projects">
+          ← Back to Projects
+        </Link>
       </div>
-      <div style={{ position: 'relative', paddingTop: '56.25%', marginTop: '2em' }}>
+      <div className={styles.projectContainer}>
+        <h1 className={styles.projectHeading}>{crtsProjectDetails.projectName} </h1>
+        <p className={styles.projectDesc}> {crtsProjectDetails.projectDesc} </p>
+        <p> <ExternalLink href={crtsProjectDetails.githubLink}>GitHub Repo</ExternalLink> </p>
+        <p> <ExternalLink href="https://crts.nishilanand.com">Play at crts.nishilanand.com</ExternalLink> </p>
+      </div>
+      <div className={styles.videoContainer}>
         <iframe
-          style={{
-            position: 'absolute',
-            top: 0,
-            left: 0,
-            width: '100%',
-            height: '100%',
-            border: 'none',
-          }}
-          src="https://www.youtube.com/embed/FiHDix29qyU"
+          className={styles.videoIframe}
+          src="https://www.youtube-nocookie.com/embed/FiHDix29qyU"
+          loading="lazy"
           allowFullScreen
         />
       </div>
