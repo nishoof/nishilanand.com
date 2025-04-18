@@ -1,6 +1,6 @@
-import { crtsProjectDetails } from "../projectDetails";
-import Link from "next/link";
 import ExternalLink from "@/components/ExternalLink";
+import { Link } from "next-view-transitions";
+import { crtsProjectDetails } from "../projectDetails";
 import styles from "../projects.module.css";
 
 export default function Crts() {
