@@ -27,24 +27,17 @@ html {
 }
 
 body {
-  /* text */
   color: var(--color-light-1);
   font-size: 0.99em;
   line-height: 2;
   letter-spacing: 0.04em;
 
-  /* links */
-  a {
-    color: var(--color-links);
-    text-decoration: none;
-    transition: all 0.2s ease-in-out;
-  }
+}
 
-  a:hover {
-    filter: brightness(1.2);
-    text-decoration: underline;
-    text-underline-offset: 2px;
-  }
+a {
+  color: var(--color-links);
+  text-decoration: none;
+  transition: all 0.2s ease-in-out;
 }
 
 h1,
@@ -86,9 +79,17 @@ ul li li {
   outline: 1px solid var(--color-dark-3);
 }
 
-.box:hover {
-  background-color: var(--color-dark-2);
-  transform: translateY(-2px) scale(1.007);
-  box-shadow: 0 8px 20px var(--color-shadow);
-  transition: all 0.2s ease-in-out;
+@media (hover: hover) and (pointer: fine) {
+  a:hover {
+    filter: brightness(1.2);
+    text-decoration: underline;
+    text-underline-offset: 2px;
+  }
+
+  .box:hover {
+    background-color: var(--color-dark-2);
+    transform: translateY(-2px) scale(1.007);
+    box-shadow: 0 8px 20px var(--color-shadow);
+    transition: all 0.2s ease-in-out;
+  }
 }
