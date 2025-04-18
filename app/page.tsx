@@ -26,13 +26,13 @@ export default function Home() {
           projectName={newsflashProjectDetails.projectName}
           projectDesc={newsflashProjectDetails.projectDesc}
           media={newsflashProjectDetails.media}
-          redirect={newsflashProjectDetails.githubLink}
+          redirect="projects/newsflash"
         />
         <ProjectCard
           projectName={elevatorProjectDetails.projectName}
           projectDesc={elevatorProjectDetails.projectDesc}
           media={elevatorProjectDetails.media}
-          redirect={elevatorProjectDetails.githubLink}
+          redirect="projects/elevator"
         />
       </div>
     </div>

@@ -62,15 +62,16 @@ p {
   margin: 2em 0;
 }
 
-.box {
+.box,
+.unhoverableBox {
   border-radius: 16px;
+  overflow: hidden;
   outline: 1px solid var(--color-dark-3);
 }
 
 .videoContainer {
   position: relative;
   padding-top: 56.25%;
-  margin-top: 2em;
   border-radius: 12px;
   overflow: hidden;
   transition: transform 0.3s ease;
@@ -84,11 +85,6 @@ p {
   height: 100%;
   border: none;
   background-color: rgba(0, 0, 0, 0.03);
-}
-
-.backButton {
-  gap: 4px;
-  margin: 1em 0;
 }
 
 @media (hover: hover) and (pointer: fine) {

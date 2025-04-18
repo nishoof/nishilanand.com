@@ -18,13 +18,6 @@ export default function ProjectCard({ projectName, projectDesc, media, redirect 
     throw new Error("Media must be a .png or .mp4 file");
   }
 
-  // Common styles
-  const cardContentStyles = {
-    display: "flex",
-    flexFlow: "column" as const,
-    textDecoration: "none"
-  };
-
   // Media (either image or video of the project)
   const MediaContent = (
     <div style={{ aspectRatio: "16/9", position: "relative", backgroundColor: "transparent" }}>
@@ -68,13 +61,13 @@ export default function ProjectCard({ projectName, projectDesc, media, redirect 
   const isExternalLink = redirect.startsWith("http");
 
   return (
-    <div className="box" style={{ marginBottom: "2em", overflow: "hidden" }}>
+    <div className="box" style={{ marginBottom: "2em" }}>
       {isExternalLink ? (
-        <ExternalLink href={redirect} style={cardContentStyles}>
+        <ExternalLink href={redirect} style={{ textDecoration: "none" }}>
           {CardContent}
         </ExternalLink>
       ) : (
-        <Link href={redirect} style={cardContentStyles}>
+        <Link href={redirect} style={{ textDecoration: "none" }}>
           {CardContent}
         </Link>
       )}
