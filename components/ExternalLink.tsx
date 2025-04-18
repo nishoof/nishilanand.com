@@ -1,6 +1,6 @@
-import Link from 'next/link';
-import { CSSProperties } from 'react';
-import { ReactNode } from 'react';
+import Link from "next/link";
+import { CSSProperties } from "react";
+import { ReactNode } from "react";
 
 type ExternalLinkProps = {
   href: string;

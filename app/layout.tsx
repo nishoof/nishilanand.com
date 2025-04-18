@@ -1,13 +1,13 @@
 import { Analytics } from "@vercel/analytics/react";
-import { GeistSans } from 'geist/font/sans';
-import type { Metadata } from 'next';
-import { ViewTransitions } from 'next-view-transitions';
-import './globals.css';
+import { GeistSans } from "geist/font/sans";
+import type { Metadata } from "next";
+import { ViewTransitions } from "next-view-transitions";
+import "./globals.css";
 
 export const metadata: Metadata = {
-  title: 'Nishil Anand',
-  description: 'Personal website of Nishil Anand',
-  keywords: ['Nishil Anand', 'Nishil', 'Anand', 'nishilanand', 'nishoof'],
+  title: "Nishil Anand",
+  description: "Personal website of Nishil Anand",
+  keywords: ["Nishil Anand", "Nishil", "Anand", "nishilanand", "nishoof"],
 };
 
 export default function RootLayout({
@@ -17,14 +17,14 @@ export default function RootLayout({
 }>) {
   return (
     <ViewTransitions>
-      <html lang='en' className={GeistSans.className}>
+      <html lang="en" className={GeistSans.className}>
         <head>
-          <script type='application/ld+json'>
+          <script type="application/ld+json">
             {JSON.stringify({
-              '@context': 'https://schema.org',
-              '@type': 'Person',
-              'name': 'Nishil Anand',
-              'url': 'https://nishilanand.com',
+              "@context": "https://schema.org",
+              "@type": "Person",
+              "name": "Nishil Anand",
+              "url": "https://nishilanand.com",
             })}
           </script>
         </head>
