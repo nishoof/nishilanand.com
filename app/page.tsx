@@ -23,16 +23,16 @@ export default function Home() {
           redirect="projects/crts.io"
         />
         <ProjectCard
-          projectName={newsflashProjectDetails.projectName}
-          projectDesc={newsflashProjectDetails.projectDesc}
-          media={newsflashProjectDetails.media}
-          redirect="projects/newsflash"
-        />
-        <ProjectCard
           projectName={elevatorProjectDetails.projectName}
           projectDesc={elevatorProjectDetails.projectDesc}
           media={elevatorProjectDetails.media}
           redirect="projects/elevator"
+        />
+        <ProjectCard
+          projectName={newsflashProjectDetails.projectName}
+          projectDesc={newsflashProjectDetails.projectDesc}
+          media={newsflashProjectDetails.media}
+          redirect="projects/newsflash"
         />
       </div>
     </div>
