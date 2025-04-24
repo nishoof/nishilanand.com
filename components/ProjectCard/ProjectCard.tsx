@@ -1,6 +1,6 @@
+import { ExternalLink } from "@/components/ExternalLink";
 import { Link } from "next-view-transitions";
 import Image from "next/image";
-import ExternalLink from "./ExternalLink";
 
 interface ProjectCardProps {
   projectName: string;
@@ -9,7 +9,7 @@ interface ProjectCardProps {
   redirect: string;
 }
 
-export default function ProjectCard({ projectName, projectDesc, media, redirect }: ProjectCardProps) {
+export function ProjectCard({ projectName, projectDesc, media, redirect }: ProjectCardProps) {
   // Check if media is a valid file
   const isImage = media.endsWith(".png");
   const isVideo = media.endsWith(".mp4");

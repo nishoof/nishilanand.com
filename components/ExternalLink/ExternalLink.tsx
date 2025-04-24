@@ -1,6 +1,5 @@
 import Link from "next/link";
-import { CSSProperties } from "react";
-import { ReactNode } from "react";
+import { CSSProperties, ReactNode } from "react";
 
 type ExternalLinkProps = {
   href: string;
@@ -8,7 +7,7 @@ type ExternalLinkProps = {
   style?: CSSProperties;
 };
 
-export default function ExternalLink({ href, children, style }: ExternalLinkProps) {
+export function ExternalLink({ href, children, style }: ExternalLinkProps) {
   return (
     <Link href={href} target="_blank" rel="noopener" style={style}>
       {children}

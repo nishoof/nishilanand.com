@@ -7,6 +7,7 @@
   --color-dark-2: #1a1a1a;
   --color-dark-3: #2e2e2e;
   --color-shadow: rgba(255, 255, 255, 0.2);
+  --leter-spacing: 0.04em;
 }
 
 @media (prefers-color-scheme: light) {
@@ -29,7 +30,7 @@ html {
 body {
   color: var(--color-light-1);
   line-height: 1.8;
-  letter-spacing: 0.04em;
+  letter-spacing: var(--leter-spacing);
 }
 
 a {

@@ -1,5 +1,5 @@
+import { ExternalLink } from "@/components/ExternalLink";
 import Image from "next/image";
-import ExternalLink from "./ExternalLink";
 
 // A single icon
 function ConnectIcon({ link, imageSrc, imageAlt }: { link: string, imageSrc: string, imageAlt: string }) {
@@ -23,7 +23,7 @@ function ConnectIcon({ link, imageSrc, imageAlt }: { link: string, imageSrc: str
 }
 
 // All of the icons
-export default function ConnectIcons() {
+export function ConnectIcons() {
   return (
     <div style={{ display: "flex", gap: 12 }}>
       <ConnectIcon

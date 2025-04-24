@@ -1,6 +1,6 @@
+import { ConnectIcons } from "@/components/ConnectIcons";
+import { ProjectCard } from "@/components/ProjectCard";
 import { Link } from "next-view-transitions";
-import ConnectIcons from "../components/ConnectIcons";
-import ProjectCard from "../components/ProjectCard";
 import { crtsProjectDetails, elevatorProjectDetails, newsflashProjectDetails } from "./projects/projectDetails";
 
 export default function Home() {
