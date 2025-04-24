@@ -1,13 +1,11 @@
+import BackButton from "@/components/BackLink";
 import ExternalLink from "@/components/ExternalLink";
-import { Link } from "next-view-transitions";
 import { crtsProjectDetails as projDetails } from "../projectDetails";
 
 export default function Crts() {
   return (
     <div className="page">
-      <Link href="/">
-        ← Back to Home
-      </Link>
+      <BackButton />
 
       <div>
         <h1>{projDetails.projectName}</h1>
