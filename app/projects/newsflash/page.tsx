@@ -1,4 +1,4 @@
-import BackButton from "@/components/BackLink";
+import BackButton from "@/components/BackButton";
 import ExternalLink from "@/components/ExternalLink";
 import Image from "next/image";
 import { newsflashProjectDetails as projDetails } from "../projectDetails";

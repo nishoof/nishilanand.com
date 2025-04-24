@@ -1,4 +1,4 @@
-import BackButton from "@/components/BackLink";
+import BackButton from "@/components/BackButton";
 import ExternalLink from "@/components/ExternalLink";
 import { crtsProjectDetails as projDetails } from "../projectDetails";
 
