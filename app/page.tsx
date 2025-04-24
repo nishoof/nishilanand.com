@@ -1,3 +1,4 @@
+import { Link } from "next-view-transitions";
 import ConnectIcons from "../components/ConnectIcons";
 import ProjectCard from "../components/ProjectCard";
 import { crtsProjectDetails, elevatorProjectDetails, newsflashProjectDetails } from "./projects/projectDetails";
@@ -12,6 +13,11 @@ export default function Home() {
           <p style={{ margin: 0 }}>Computer Science Major at the University of San Francisco</p>
           <p style={{ margin: 0 }}>Currently interested in backend development, but open to exploring other fields as well!</p>
         </div>
+      </div>
+
+      <div className="section">
+        <h2>Hackathon Log</h2>
+        <Link href="/hackathon-log">View my hackathon log →</Link>
       </div>
 
       <div className="section">
