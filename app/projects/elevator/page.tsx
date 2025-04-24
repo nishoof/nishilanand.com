@@ -1,14 +1,12 @@
+import BackButton from "@/components/BackButton";
 import ExternalLink from "@/components/ExternalLink";
-import { Link } from "next-view-transitions";
 import Image from "next/image";
 import { elevatorProjectDetails as projDetails } from "../projectDetails";
 
 export default function Elevator() {
   return (
     <div className="page">
-      <Link href="/">
-        ← Back to Home
-      </Link>
+      <BackButton />
 
       <div>
         <h1>{projDetails.projectName}</h1>

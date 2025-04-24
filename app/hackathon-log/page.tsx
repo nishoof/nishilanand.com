@@ -1,11 +1,10 @@
-import { Link } from "next-view-transitions";
+import BackButton from "@/components/BackButton";
 
 export default function HackathonLog() {
   return (
     <div className="page">
-      <Link href="/">
-        ← Back to Home
-      </Link>
+      <BackButton />
+
       <div>
         <h1>Hackathon Log</h1>
         <p>A log of all the hackathons I've been to so far!</p>
