@@ -30,7 +30,7 @@ export default function HackathonLog() {
               <td>Mar 22, 2025</td>
               <td>Cloudflare</td>
               <td>AI Agents Hackathon - GTC 2025 Edition</td>
-              <td>Best use of Tavus AI (3rd) & Windsurf (2nd)</td>
+              <td>Best use of Tavus AI (3rd), Best use of Windsurf (2nd)</td>
               <td>Launchpad</td>
             </tr>
             <tr>
@@ -48,19 +48,8 @@ export default function HackathonLog() {
               <td>Newsflash</td>
             </tr>
           </tbody>
-        </table>{/* <p><ExternalLink href={projDetails.githubLink}>GitHub Repo ↗</ExternalLink></p>
-        <p><ExternalLink href="https://github.com/nishoof/elevator/releases">GitHub Releases (download playable game) ↗</ExternalLink></p> */}
+        </table>
       </div>
-
-      {/* <div className="unhoverableBox section" style={{ aspectRatio: "16/9", position: "relative", backgroundColor: "transparent" }}>
-        <Image
-          src={projDetails.media}
-          alt={projDetails.projectName}
-          fill
-          style={{ objectFit: "cover" }}
-          priority
-        />
-      </div> */}
     </div>
   );
 }
