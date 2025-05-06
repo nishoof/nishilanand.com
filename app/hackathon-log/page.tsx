@@ -5,12 +5,19 @@ interface Hackathon {
   date: string;
   location: string;
   name: string;
-  prizes: string;
+  prizes?: string;
   projectName: string;
   projectLink: string;
 }
 
 const hackathons: Hackathon[] = [
+  {
+    date: "May 2, 2025",
+    location: "AWS GenAI Loft, SF",
+    name: "MCP and A2A Hackathon",
+    projectName: "PulseAI",
+    projectLink: "http://github.com/peteteaa/MCP-hack",
+  },
   {
     date: "Apr 4-6, 2025",
     location: "USF",
@@ -53,7 +60,11 @@ function HackathonRow({ hackathon }: { hackathon: Hackathon }) {
       <td>{hackathon.date}</td>
       <td>{hackathon.location}</td>
       <td>{hackathon.name}</td>
-      <td>{hackathon.prizes}</td>
+      {
+        hackathon.prizes ?
+          <td>{hackathon.prizes}</td> :         // if prizes, show them
+          <td className="hideOnMobile">-</td>   // if no prizes, show a dash on desktop, show nothing on mobile
+      }
       <td>
         <ExternalLink href={hackathon.projectLink}>
           {hackathon.projectName + UNICODE_NO_BREAK_SPACE + "↗"}
