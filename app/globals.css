@@ -103,9 +103,13 @@ td {
 
 @media (hover: hover) and (pointer: fine) {
   a:hover {
-    filter: brightness(1.2);
     text-decoration: underline;
     text-underline-offset: 2px;
+  }
+
+  /* Only apply the filter effect to links that don't have images or videos */
+  a:hover:not(:has(img)):not(:has(video)) {
+    filter: brightness(1.2);
   }
 
   .box:hover {
