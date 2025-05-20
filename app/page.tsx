@@ -1,7 +1,7 @@
 import { ConnectIcons } from "@/components/ConnectIcons";
 import { ProjectCard } from "@/components/ProjectCard";
 import { Link } from "next-view-transitions";
-import { crtsProjectDetails, elevatorProjectDetails, newsflashProjectDetails } from "./projects/projectDetails";
+import { cregProjectDetails, crtsProjectDetails, elevatorProjectDetails, newsflashProjectDetails } from "./projects/projectDetails";
 
 export default function Home() {
   return (
@@ -21,7 +21,13 @@ export default function Home() {
       </div>
 
       <div className="section">
-        <h2>Projects</h2>
+        <h2>Featured Projects</h2>
+        <ProjectCard
+          projectName={cregProjectDetails.projectName}
+          projectDesc={cregProjectDetails.projectDesc}
+          media={cregProjectDetails.media}
+          redirect="projects/creg"
+        />
         <ProjectCard
           projectName={crtsProjectDetails.projectName}
           projectDesc={crtsProjectDetails.projectDesc}
