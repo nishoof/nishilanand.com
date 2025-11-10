@@ -12,6 +12,20 @@ interface Hackathon {
 
 const hackathons: Hackathon[] = [
   {
+    date: "Nov 7-9, 2025",
+    location: "USF",
+    name: "DEPLOY/25",
+    projectName: "MegaBlox",
+    projectLink: "https://github.com/gurshdev/megablox",
+  },
+  {
+    date: "Oct 24-26, 2025",
+    location: "The Palace of Fine Arts, SF",
+    name: "Calhacks 12.0",
+    projectName: "@groq is this true",
+    projectLink: "https://github.com/tomayyeung/groq-is-this-true",
+  },
+  {
     date: "May 2, 2025",
     location: "AWS GenAI Loft, SF",
     name: "MCP and A2A Hackathon",
