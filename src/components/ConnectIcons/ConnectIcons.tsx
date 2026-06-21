@@ -1,4 +1,5 @@
 import { ExternalLink } from "@/components/ExternalLink";
+import styles from "./ConnectIcons.module.css";
 
 // A single icon
 function ConnectIcon({
@@ -17,7 +18,7 @@ function ConnectIcon({
   return (
     <ExternalLink href={link}>
       <div
-        className="box"
+        className={styles.hover}
         style={{
           width: innerSize,
           height: innerSize,
