@@ -1,6 +1,6 @@
 import { ConnectIcons } from "@/components/ConnectIcons";
 import { ProjectCard } from "@/components/ProjectCard";
-import { Link } from "next-view-transitions";
+import { Link } from "react-router-dom";
 import { cregProjectDetails, crtsProjectDetails, elevatorProjectDetails, newsflashProjectDetails } from "./projects/projectDetails";
 
 export default function Home() {
@@ -17,7 +17,7 @@ export default function Home() {
 
       <div className="section">
         <h2>Hackathon Log</h2>
-        <Link href="/hackathon-log">View my hackathon log →</Link>
+        <Link to="/hackathon-log">View my hackathon log →</Link>
       </div>
 
       <div className="section">

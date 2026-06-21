@@ -1,6 +1,6 @@
 import { BackButton } from "@/components/BackButton";
 import { ExternalLink } from "@/components/ExternalLink";
-import { crtsProjectDetails as projDetails } from "../projectDetails";
+import { crtsProjectDetails as projDetails } from "./projectDetails";
 
 export default function Crts() {
   return (

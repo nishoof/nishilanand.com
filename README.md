@@ -1,14 +1,32 @@
-This is a [Next.js](https://nextjs.org) project.
+This is a [React](https://react.dev) + [Vite](https://vite.dev) project.
 
 ## Getting Started
 
-To run the development server:
+Install dependencies:
 
 ```bash
-npm run dev
+pnpm install
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Run the development server:
+
+```bash
+pnpm dev
+```
+
+Open [http://localhost:5173](http://localhost:5173) with your browser to see the result.
+
+## Building
+
+```bash
+pnpm build
+```
+
+The production build is output to the `dist/` directory. Preview it with:
+
+```bash
+pnpm preview
+```
 
 ## Image Credits
 

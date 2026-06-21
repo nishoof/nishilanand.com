@@ -1,9 +1,8 @@
 import { BackButton } from "@/components/BackButton";
 import { ExternalLink } from "@/components/ExternalLink";
-import Image from "next/image";
-import { newsflashProjectDetails as projDetails } from "../projectDetails";
+import { elevatorProjectDetails as projDetails } from "./projectDetails";
 
-export default function Newsflash() {
+export default function Elevator() {
   return (
     <div className="page">
       <BackButton />
@@ -11,17 +10,15 @@ export default function Newsflash() {
       <div>
         <h1>{projDetails.projectName}</h1>
         <p>{projDetails.projectDesc}</p>
-        <p>This was my first hackathon project :D</p>
         <p><ExternalLink href={projDetails.githubLink}>GitHub Repo ↗</ExternalLink></p>
+        <p><ExternalLink href="https://github.com/nishoof/elevator/releases">GitHub Releases (download playable game) ↗</ExternalLink></p>
       </div>
 
       <div className="unhoverableBox section" style={{ aspectRatio: "16/9", position: "relative", backgroundColor: "transparent" }}>
-        <Image
+        <img
           src={projDetails.media}
           alt={projDetails.projectName}
-          fill
-          style={{ objectFit: "cover" }}
-          priority
+          style={{ position: "absolute", inset: 0, width: "100%", height: "100%", objectFit: "cover" }}
         />
       </div>
     </div>

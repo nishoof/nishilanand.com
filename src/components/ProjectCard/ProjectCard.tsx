@@ -1,6 +1,5 @@
 import { ExternalLink } from "@/components/ExternalLink";
-import { Link } from "next-view-transitions";
-import Image from "next/image";
+import { Link } from "react-router-dom";
 
 interface ProjectCardProps {
   projectName: string;
@@ -22,12 +21,10 @@ export function ProjectCard({ projectName, projectDesc, media, redirect }: Proje
   const MediaContent = (
     <div style={{ aspectRatio: "16/9", position: "relative", backgroundColor: "transparent" }}>
       {isImage ? (
-        <Image
+        <img
           src={media}
           alt={projectName}
-          fill
-          style={{ objectFit: "cover" }}
-          priority
+          style={{ position: "absolute", inset: 0, width: "100%", height: "100%", objectFit: "cover" }}
         />
       ) : (
         <video
@@ -67,7 +64,7 @@ export function ProjectCard({ projectName, projectDesc, media, redirect }: Proje
           {CardContent}
         </ExternalLink>
       ) : (
-        <Link href={redirect} style={{ textDecoration: "none" }}>
+        <Link to={`/${redirect}`} style={{ textDecoration: "none" }}>
           {CardContent}
         </Link>
       )}

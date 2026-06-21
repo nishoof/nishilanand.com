@@ -1,5 +1,4 @@
 import { ExternalLink } from "@/components/ExternalLink";
-import Image from "next/image";
 
 // A single icon
 function ConnectIcon({ link, imageSrc, imageAlt }: { link: string, imageSrc: string, imageAlt: string }) {
@@ -10,7 +9,7 @@ function ConnectIcon({ link, imageSrc, imageAlt }: { link: string, imageSrc: str
   return (
     <ExternalLink href={link}>
       <div className="box" style={{ width: innerSize, height: innerSize, borderRadius: borderRadius, padding: padding }}>
-        <Image
+        <img
           src={imageSrc}
           alt={imageAlt}
           width={innerSize}

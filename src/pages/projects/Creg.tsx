@@ -1,7 +1,6 @@
 import { BackButton } from "@/components/BackButton";
 import { ExternalLink } from "@/components/ExternalLink";
-import Image from "next/image";
-import { cregProjectDetails as projDetails } from "../projectDetails";
+import { cregProjectDetails as projDetails } from "./projectDetails";
 
 export default function Creg() {
   return (
@@ -16,12 +15,10 @@ export default function Creg() {
       </div>
 
       <div className="unhoverableBox section" style={{ aspectRatio: "16/9", position: "relative", backgroundColor: "transparent" }}>
-        <Image
+        <img
           src={projDetails.media}
           alt={projDetails.projectName}
-          fill
-          style={{ objectFit: "cover" }}
-          priority
+          style={{ position: "absolute", inset: 0, width: "100%", height: "100%", objectFit: "cover" }}
         />
       </div>
     </div>
