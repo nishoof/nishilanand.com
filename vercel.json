@@ -1,9 +1,11 @@
 {
   "redirects": [
     { "source": "/projects", "destination": "/", "permanent": true },
-    { "source": "/projects/crts", "destination": "/projects/crts.io", "permanent": true }
+    {
+      "source": "/projects/crts",
+      "destination": "/projects/crts.io",
+      "permanent": true
+    }
   ],
-  "rewrites": [
-    { "source": "/(.*)", "destination": "/index.html" }
-  ]
+  "rewrites": [{ "source": "/(.*)", "destination": "/index.html" }]
 }

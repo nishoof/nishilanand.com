@@ -5,10 +5,7 @@ export function BackButton() {
   const navigate = useNavigate();
 
   return (
-    <button
-      onClick={() => navigate(-1)}
-      className={styles.backButton}
-    >
+    <button onClick={() => navigate(-1)} className={styles.backButton}>
       ← Back
     </button>
   );

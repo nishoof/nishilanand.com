@@ -1,7 +1,12 @@
 import { ConnectIcons } from "@/components/ConnectIcons";
 import { ProjectCard } from "@/components/ProjectCard";
 import { Link } from "react-router-dom";
-import { cregProjectDetails, crtsProjectDetails, elevatorProjectDetails, newsflashProjectDetails } from "./projects/projectDetails";
+import {
+  cregProjectDetails,
+  crtsProjectDetails,
+  elevatorProjectDetails,
+  newsflashProjectDetails,
+} from "./projects/projectDetails";
 
 export default function Home() {
   return (
@@ -10,8 +15,13 @@ export default function Home() {
         <ConnectIcons />
         <h1>Nishil Anand</h1>
         <div>
-          <p style={{ margin: 0 }}>Computer Science Major at the University of San Francisco</p>
-          <p style={{ margin: 0 }}>Currently interested in backend development, but open to exploring other fields as well!</p>
+          <p style={{ margin: 0 }}>
+            Computer Science Major at the University of San Francisco
+          </p>
+          <p style={{ margin: 0 }}>
+            Currently interested in backend development, but open to exploring
+            other fields as well!
+          </p>
         </div>
       </div>
 

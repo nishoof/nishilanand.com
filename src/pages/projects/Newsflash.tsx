@@ -11,14 +11,31 @@ export default function Newsflash() {
         <h1>{projDetails.projectName}</h1>
         <p>{projDetails.projectDesc}</p>
         <p>This was my first hackathon project :D</p>
-        <p><ExternalLink href={projDetails.githubLink}>GitHub Repo ↗</ExternalLink></p>
+        <p>
+          <ExternalLink href={projDetails.githubLink}>
+            GitHub Repo ↗
+          </ExternalLink>
+        </p>
       </div>
 
-      <div className="unhoverableBox section" style={{ aspectRatio: "16/9", position: "relative", backgroundColor: "transparent" }}>
+      <div
+        className="unhoverableBox section"
+        style={{
+          aspectRatio: "16/9",
+          position: "relative",
+          backgroundColor: "transparent",
+        }}
+      >
         <img
           src={projDetails.media}
           alt={projDetails.projectName}
-          style={{ position: "absolute", inset: 0, width: "100%", height: "100%", objectFit: "cover" }}
+          style={{
+            position: "absolute",
+            inset: 0,
+            width: "100%",
+            height: "100%",
+            objectFit: "cover",
+          }}
         />
       </div>
     </div>

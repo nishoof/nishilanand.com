@@ -10,15 +10,36 @@ export default function Elevator() {
       <div>
         <h1>{projDetails.projectName}</h1>
         <p>{projDetails.projectDesc}</p>
-        <p><ExternalLink href={projDetails.githubLink}>GitHub Repo ↗</ExternalLink></p>
-        <p><ExternalLink href="https://github.com/nishoof/elevator/releases">GitHub Releases (download playable game) ↗</ExternalLink></p>
+        <p>
+          <ExternalLink href={projDetails.githubLink}>
+            GitHub Repo ↗
+          </ExternalLink>
+        </p>
+        <p>
+          <ExternalLink href="https://github.com/nishoof/elevator/releases">
+            GitHub Releases (download playable game) ↗
+          </ExternalLink>
+        </p>
       </div>
 
-      <div className="unhoverableBox section" style={{ aspectRatio: "16/9", position: "relative", backgroundColor: "transparent" }}>
+      <div
+        className="unhoverableBox section"
+        style={{
+          aspectRatio: "16/9",
+          position: "relative",
+          backgroundColor: "transparent",
+        }}
+      >
         <img
           src={projDetails.media}
           alt={projDetails.projectName}
-          style={{ position: "absolute", inset: 0, width: "100%", height: "100%", objectFit: "cover" }}
+          style={{
+            position: "absolute",
+            inset: 0,
+            width: "100%",
+            height: "100%",
+            objectFit: "cover",
+          }}
         />
       </div>
     </div>

@@ -10,8 +10,16 @@ export default function Crts() {
       <div>
         <h1>{projDetails.projectName}</h1>
         <p>{projDetails.projectDesc}</p>
-        <p><ExternalLink href={projDetails.githubLink}>GitHub Repo ↗</ExternalLink></p>
-        <p><ExternalLink href="https://crts.nishilanand.com">Play the game! ↗</ExternalLink></p>
+        <p>
+          <ExternalLink href={projDetails.githubLink}>
+            GitHub Repo ↗
+          </ExternalLink>
+        </p>
+        <p>
+          <ExternalLink href="https://crts.nishilanand.com">
+            Play the game! ↗
+          </ExternalLink>
+        </p>
       </div>
 
       <div className="videoContainer section">

@@ -63,8 +63,8 @@ const hackathons: Hackathon[] = [
     prizes: "3rd Overall",
     projectName: "Newsflash",
     projectLink: "http://github.com/nishoof/newsflash",
-  }
-]
+  },
+];
 
 const UNICODE_NO_BREAK_SPACE = "\u00A0";
 
@@ -74,11 +74,11 @@ function HackathonRow({ hackathon }: { hackathon: Hackathon }) {
       <td>{hackathon.date}</td>
       <td>{hackathon.location}</td>
       <td>{hackathon.name}</td>
-      {
-        hackathon.prizes ?
-          <td>{hackathon.prizes}</td> :         // if prizes, show them
-          <td className="hideOnMobile">-</td>   // if no prizes, show a dash on desktop, show nothing on mobile
-      }
+      {hackathon.prizes ? (
+        <td>{hackathon.prizes}</td> // if prizes, show them
+      ) : (
+        <td className="hideOnMobile">-</td> // if no prizes, show a dash on desktop, show nothing on mobile
+      )}
       <td>
         <ExternalLink href={hackathon.projectLink}>
           {hackathon.projectName + UNICODE_NO_BREAK_SPACE + "↗"}

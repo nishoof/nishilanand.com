@@ -8,7 +8,12 @@ interface ProjectCardProps {
   redirect: string;
 }
 
-export function ProjectCard({ projectName, projectDesc, media, redirect }: ProjectCardProps) {
+export function ProjectCard({
+  projectName,
+  projectDesc,
+  media,
+  redirect,
+}: ProjectCardProps) {
   // Check if media is a valid file
   const isImage = media.endsWith(".png");
   const isVideo = media.endsWith(".mp4");
@@ -19,16 +24,33 @@ export function ProjectCard({ projectName, projectDesc, media, redirect }: Proje
 
   // Media (either image or video of the project)
   const MediaContent = (
-    <div style={{ aspectRatio: "16/9", position: "relative", backgroundColor: "transparent" }}>
+    <div
+      style={{
+        aspectRatio: "16/9",
+        position: "relative",
+        backgroundColor: "transparent",
+      }}
+    >
       {isImage ? (
         <img
           src={media}
           alt={projectName}
-          style={{ position: "absolute", inset: 0, width: "100%", height: "100%", objectFit: "cover" }}
+          style={{
+            position: "absolute",
+            inset: 0,
+            width: "100%",
+            height: "100%",
+            objectFit: "cover",
+          }}
         />
       ) : (
         <video
-          style={{ display: "block", width: "100%", height: "100%", objectFit: "cover" }}
+          style={{
+            display: "block",
+            width: "100%",
+            height: "100%",
+            objectFit: "cover",
+          }}
           autoPlay
           playsInline
           muted

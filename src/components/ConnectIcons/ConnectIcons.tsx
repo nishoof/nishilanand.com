@@ -1,14 +1,30 @@
 import { ExternalLink } from "@/components/ExternalLink";
 
 // A single icon
-function ConnectIcon({ link, imageSrc, imageAlt }: { link: string, imageSrc: string, imageAlt: string }) {
+function ConnectIcon({
+  link,
+  imageSrc,
+  imageAlt,
+}: {
+  link: string;
+  imageSrc: string;
+  imageAlt: string;
+}) {
   const borderRadius = 5;
   const padding = 7;
   const innerSize = 40 - padding * 2;
 
   return (
     <ExternalLink href={link}>
-      <div className="box" style={{ width: innerSize, height: innerSize, borderRadius: borderRadius, padding: padding }}>
+      <div
+        className="box"
+        style={{
+          width: innerSize,
+          height: innerSize,
+          borderRadius: borderRadius,
+          padding: padding,
+        }}
+      >
         <img
           src={imageSrc}
           alt={imageAlt}
