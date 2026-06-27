@@ -38,26 +38,26 @@ export default function Home() {
       <div className="section">
         <h2>Featured Projects</h2>
         <ProjectCard
-          projectName={cregProjectDetails.projectName}
-          projectDesc={cregProjectDetails.projectDesc}
+          name={cregProjectDetails.projectName}
+          descShort={cregProjectDetails.projectDescShort}
           media={cregProjectDetails.media}
           redirect="projects/creg"
         />
         <ProjectCard
-          projectName={crtsProjectDetails.projectName}
-          projectDesc={crtsProjectDetails.projectDesc}
+          name={crtsProjectDetails.projectName}
+          descShort={crtsProjectDetails.projectDescShort}
           media={crtsProjectDetails.media}
           redirect="projects/crts.io"
         />
         <ProjectCard
-          projectName={elevatorProjectDetails.projectName}
-          projectDesc={elevatorProjectDetails.projectDesc}
+          name={elevatorProjectDetails.projectName}
+          descShort={elevatorProjectDetails.projectDescShort}
           media={elevatorProjectDetails.media}
           redirect="projects/elevator"
         />
         <ProjectCard
-          projectName={newsflashProjectDetails.projectName}
-          projectDesc={newsflashProjectDetails.projectDesc}
+          name={newsflashProjectDetails.projectName}
+          descShort={newsflashProjectDetails.projectDescShort}
           media={newsflashProjectDetails.media}
           redirect="projects/newsflash"
         />

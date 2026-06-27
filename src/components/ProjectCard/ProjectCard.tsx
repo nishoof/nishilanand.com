@@ -1,16 +1,17 @@
 import { ExternalLink } from "@/components/ExternalLink";
 import { Link } from "react-router-dom";
+import styles from "./ProjectCard.module.css";
 
 interface ProjectCardProps {
-  projectName: string;
-  projectDesc: string;
+  name: string;
+  descShort: string;
   media: string;
   redirect: string;
 }
 
 export function ProjectCard({
-  projectName,
-  projectDesc,
+  name,
+  descShort,
   media,
   redirect,
 }: ProjectCardProps) {
@@ -22,40 +23,24 @@ export function ProjectCard({
     throw new Error("Media must be a .png or .mp4 file");
   }
 
-  // Media (either image or video of the project)
-  const MediaContent = (
-    <div
-      style={{
-        aspectRatio: "16/9",
-        position: "relative",
-        backgroundColor: "transparent",
-      }}
-    >
+  const textContent = (
+    <div className={styles.text}>
+      <div className={styles.head}>
+        <h3 className={styles.name}>{name}</h3>
+        <span className={styles.arrow} aria-hidden="true">
+          ↗
+        </span>
+      </div>
+      <p className={styles.descShort}>{descShort}</p>
+    </div>
+  );
+
+  const mediaContent = (
+    <div className={styles.media}>
       {isImage ? (
-        <img
-          src={media}
-          alt={projectName}
-          style={{
-            position: "absolute",
-            inset: 0,
-            width: "100%",
-            height: "100%",
-            objectFit: "cover",
-          }}
-        />
+        <img src={media} alt={name} />
       ) : (
-        <video
-          style={{
-            display: "block",
-            width: "100%",
-            height: "100%",
-            objectFit: "cover",
-          }}
-          autoPlay
-          playsInline
-          muted
-          loop
-        >
+        <video autoPlay playsInline muted loop>
           <source src={media} type="video/mp4" />
           Your browser does not support the video tag.
         </video>
@@ -63,31 +48,24 @@ export function ProjectCard({
     </div>
   );
 
-  // Card content
-  const CardContent = (
+  const content = (
     <>
-      {MediaContent}
-      <div style={{ padding: 20 }}>
-        <div>
-          <h2 style={{ color: "var(--color-light-1)" }}>{projectName}</h2>
-        </div>
-        <p style={{ margin: 0 }}>{projectDesc}</p>
-      </div>
+      {textContent}
+      {mediaContent}
     </>
   );
 
-  // Check if the redirect is an external link
   const isExternalLink = redirect.startsWith("http");
 
   return (
-    <div className="box" style={{ marginBottom: "2em" }}>
+    <div className={styles.project}>
       {isExternalLink ? (
-        <ExternalLink href={redirect} style={{ textDecoration: "none" }}>
-          {CardContent}
+        <ExternalLink href={redirect} className={styles.link}>
+          {content}
         </ExternalLink>
       ) : (
-        <Link to={`/${redirect}`} style={{ textDecoration: "none" }}>
-          {CardContent}
+        <Link to={`/${redirect}`} className={styles.link}>
+          {content}
         </Link>
       )}
     </div>
