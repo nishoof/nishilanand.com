@@ -8,8 +8,8 @@ export default function Newsflash() {
       <BackButton />
 
       <div>
-        <h1>{projDetails.projectName}</h1>
-        <p>{projDetails.projectDesc}</p>
+        <h1>{projDetails.name}</h1>
+        <p>{projDetails.descriptionLong}</p>
         <p>This was my first hackathon project :D</p>
         <p>
           <ExternalLink href={projDetails.githubLink}>
@@ -28,7 +28,7 @@ export default function Newsflash() {
       >
         <img
           src={projDetails.media}
-          alt={projDetails.projectName}
+          alt={projDetails.name}
           style={{
             position: "absolute",
             inset: 0,

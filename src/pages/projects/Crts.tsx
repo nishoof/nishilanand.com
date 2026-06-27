@@ -8,8 +8,8 @@ export default function Crts() {
       <BackButton />
 
       <div>
-        <h1>{projDetails.projectName}</h1>
-        <p>{projDetails.projectDesc}</p>
+        <h1>{projDetails.name}</h1>
+        <p>{projDetails.descriptionLong}</p>
         <p>
           <ExternalLink href={projDetails.githubLink}>
             GitHub Repo ↗
