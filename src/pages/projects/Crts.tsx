@@ -1,5 +1,6 @@
 import { BackButton } from "@/components/BackButton";
 import { ExternalLink } from "@/components/ExternalLink";
+import { ProjectMedia } from "@/components/ProjectMedia";
 import { crtsProjectDetails as projDetails } from "./projectDetails";
 
 export default function Crts() {
@@ -22,13 +23,11 @@ export default function Crts() {
         </p>
       </div>
 
-      <div className="videoContainer section">
-        <iframe
-          className="videoIframe"
-          src="https://www.youtube-nocookie.com/embed/FiHDix29qyU"
-          allowFullScreen
-        />
-      </div>
+      <ProjectMedia
+        src="https://www.youtube-nocookie.com/embed/FiHDix29qyU"
+        alt="crts.io demo"
+        className="section"
+      />
     </div>
   );
 }

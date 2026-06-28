@@ -1,4 +1,5 @@
 import { ExternalLink } from "@/components/ExternalLink";
+import { ProjectMedia } from "@/components/ProjectMedia";
 import { Link } from "react-router-dom";
 import styles from "./ProjectCard.module.css";
 
@@ -15,14 +16,6 @@ export function ProjectCard({
   media,
   redirect,
 }: ProjectCardProps) {
-  // Check if media is a valid file
-  const isImage = media.endsWith(".png");
-  const isVideo = media.endsWith(".mp4");
-
-  if (!isVideo && !isImage) {
-    throw new Error("Media must be a .png or .mp4 file");
-  }
-
   const textContent = (
     <div className={styles.text}>
       <div className={styles.head}>
@@ -36,16 +29,7 @@ export function ProjectCard({
   );
 
   const mediaContent = (
-    <div className={styles.media}>
-      {isImage ? (
-        <img src={media} alt={name} />
-      ) : (
-        <video autoPlay playsInline muted loop>
-          <source src={media} type="video/mp4" />
-          Your browser does not support the video tag.
-        </video>
-      )}
-    </div>
+    <ProjectMedia src={media} alt={name} className={styles.teaser} />
   );
 
   const content = (
