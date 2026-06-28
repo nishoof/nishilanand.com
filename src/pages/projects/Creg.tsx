@@ -1,5 +1,6 @@
 import { BackButton } from "@/components/BackButton";
 import { ExternalLink } from "@/components/ExternalLink";
+import { ProjectMedia } from "@/components/ProjectMedia";
 import { cregProjectDetails as projDetails } from "./projectDetails";
 
 export default function Creg() {
@@ -8,8 +9,8 @@ export default function Creg() {
       <BackButton />
 
       <div>
-        <h1>{projDetails.projectName}</h1>
-        <p>{projDetails.projectDesc}</p>
+        <h1>{projDetails.name}</h1>
+        <p>{projDetails.descriptionLong}</p>
         <p>
           <ExternalLink href={projDetails.githubLink}>
             GitHub Repo ↗
@@ -22,26 +23,11 @@ export default function Creg() {
         </p>
       </div>
 
-      <div
-        className="unhoverableBox section"
-        style={{
-          aspectRatio: "16/9",
-          position: "relative",
-          backgroundColor: "transparent",
-        }}
-      >
-        <img
-          src={projDetails.media}
-          alt={projDetails.projectName}
-          style={{
-            position: "absolute",
-            inset: 0,
-            width: "100%",
-            height: "100%",
-            objectFit: "cover",
-          }}
-        />
-      </div>
+      <ProjectMedia
+        src={projDetails.media}
+        alt={projDetails.name}
+        className="section"
+      />
     </div>
   );
 }

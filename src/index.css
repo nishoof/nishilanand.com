@@ -7,7 +7,12 @@
   --color-dark-2: #1a1a1a;
   --color-dark-3: #2e2e2e;
   --color-shadow: rgba(255, 255, 255, 0.2);
-  --leter-spacing: 0.04em;
+
+  --font-sans:
+    "Geist", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica,
+    Arial, sans-serif;
+  --font-serif: "Fraunces", Georgia, "Times New Roman", serif;
+  --font-mono: "JetBrains Mono", ui-monospace, "SF Mono", Menlo, monospace;
 }
 
 @media (prefers-color-scheme: light) {
@@ -25,28 +30,29 @@
 
 html {
   background-color: var(--color-dark-1);
-  font-family:
-    "Geist",
-    -apple-system,
-    BlinkMacSystemFont,
-    "Segoe UI",
-    Roboto,
-    Helvetica,
-    Arial,
-    sans-serif;
+  font-family: var(--font-sans);
 }
 
 body {
   margin: 0;
   color: var(--color-light-1);
-  line-height: 1.8;
-  letter-spacing: var(--leter-spacing);
+  line-height: 1.7;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
 }
 
 a {
   color: var(--color-links);
   text-decoration: none;
   transition: all 0.2s ease-in-out;
+}
+
+h1,
+h2,
+h3 {
+  font-family: var(--font-serif);
+  font-weight: 500;
+  letter-spacing: -0.01em;
 }
 
 h1 {
@@ -86,31 +92,6 @@ td {
   margin: 2em 0;
 }
 
-.box,
-.unhoverableBox {
-  border-radius: 16px;
-  overflow: hidden;
-  outline: 1px solid var(--color-dark-3);
-}
-
-.videoContainer {
-  position: relative;
-  padding-top: 56.25%;
-  border-radius: 12px;
-  overflow: hidden;
-  transition: transform 0.3s ease;
-}
-
-.videoIframe {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  border: none;
-  background-color: rgba(0, 0, 0, 0.03);
-}
-
 @media (hover: hover) and (pointer: fine) {
   a:hover {
     text-decoration: underline;
@@ -120,17 +101,6 @@ td {
   /* Only apply the filter effect to links that don't have images or videos */
   a:hover:not(:has(img)):not(:has(video)) {
     filter: brightness(1.2);
-  }
-
-  .box:hover {
-    background-color: var(--color-dark-2);
-    transform: translateY(-2px) scale(1.007);
-    box-shadow: 0 8px 20px var(--color-shadow);
-    transition: all 0.2s ease-in-out;
-  }
-
-  .videoContainer:hover {
-    transform: scale(1.01);
   }
 }
 

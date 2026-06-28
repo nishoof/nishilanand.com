@@ -11,21 +11,26 @@ import {
 export default function Home() {
   return (
     <div className="page">
-      <div className="section">
-        <ConnectIcons />
-        <h1>Nishil Anand</h1>
-        <div>
-          <p style={{ margin: 0 }}>
-            Computer Science Major at the University of San Francisco
-          </p>
-          <p style={{ margin: 0 }}>
-            Currently interested in backend development, but open to exploring
-            other fields as well!
-          </p>
+      <div className="section" style={{ margin: "25% 0 4.5em 0" }}>
+        <h1
+          style={{
+            fontSize: "clamp(2.25em, 12vw, 4em)",
+            lineHeight: 1.02,
+            letterSpacing: "-0.02em",
+            // margin: "0.75rem 0 1.25rem",
+          }}
+        >
+          Nishil Anand
+        </h1>
+        <div style={{ margin: "1.5em 0" }}>
+          <p>Software Engineering Intern at Capital One</p>
+          <p>Computer Science at the University of San Francisco</p>
+          <p>Backend Development</p>
         </div>
+        <ConnectIcons />
       </div>
 
-      <div className="section">
+      <div style={{ margin: "4.5em 0" }}>
         <h2>Hackathon Log</h2>
         <Link to="/hackathon-log">View my hackathon log →</Link>
       </div>
@@ -33,26 +38,26 @@ export default function Home() {
       <div className="section">
         <h2>Featured Projects</h2>
         <ProjectCard
-          projectName={cregProjectDetails.projectName}
-          projectDesc={cregProjectDetails.projectDesc}
+          name={cregProjectDetails.name}
+          descShort={cregProjectDetails.descriptionShort}
           media={cregProjectDetails.media}
           redirect="projects/creg"
         />
         <ProjectCard
-          projectName={crtsProjectDetails.projectName}
-          projectDesc={crtsProjectDetails.projectDesc}
+          name={crtsProjectDetails.name}
+          descShort={crtsProjectDetails.descriptionShort}
           media={crtsProjectDetails.media}
           redirect="projects/crts.io"
         />
         <ProjectCard
-          projectName={elevatorProjectDetails.projectName}
-          projectDesc={elevatorProjectDetails.projectDesc}
+          name={elevatorProjectDetails.name}
+          descShort={elevatorProjectDetails.descriptionShort}
           media={elevatorProjectDetails.media}
           redirect="projects/elevator"
         />
         <ProjectCard
-          projectName={newsflashProjectDetails.projectName}
-          projectDesc={newsflashProjectDetails.projectDesc}
+          name={newsflashProjectDetails.name}
+          descShort={newsflashProjectDetails.descriptionShort}
           media={newsflashProjectDetails.media}
           redirect="projects/newsflash"
         />
