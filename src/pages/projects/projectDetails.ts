@@ -2,7 +2,7 @@ export interface ProjectDetails {
   name: string;
   descriptionShort: string;
   descriptionLong: string;
-  media: string;
+  media?: string;
   githubLink: string;
 }
 

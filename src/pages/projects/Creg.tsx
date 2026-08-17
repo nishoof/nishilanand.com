@@ -23,11 +23,13 @@ export default function Creg() {
         </p>
       </div>
 
-      <ProjectMedia
-        src={projDetails.media}
-        alt={projDetails.name}
-        className="section"
-      />
+      {projDetails.media && (
+        <ProjectMedia
+          src={projDetails.media}
+          alt={projDetails.name}
+          className="section"
+        />
+      )}
     </div>
   );
 }

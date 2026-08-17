@@ -6,6 +6,10 @@
   margin-bottom: 5rem;
 }
 
+.project:not(:has(.teaser)) {
+  grid-template-columns: 1fr;
+}
+
 .link {
   display: contents;
   color: inherit;

@@ -19,11 +19,13 @@ export default function Newsflash() {
         </p>
       </div>
 
-      <ProjectMedia
-        src={projDetails.media}
-        alt={projDetails.name}
-        className="section"
-      />
+      {projDetails.media && (
+        <ProjectMedia
+          src={projDetails.media}
+          alt={projDetails.name}
+          className="section"
+        />
+      )}
     </div>
   );
 }

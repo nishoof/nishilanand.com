@@ -6,7 +6,7 @@ import styles from "./ProjectCard.module.css";
 interface ProjectCardProps {
   name: string;
   descShort: string;
-  media: string;
+  media?: string;
   redirect: string;
 }
 
@@ -28,9 +28,9 @@ export function ProjectCard({
     </div>
   );
 
-  const mediaContent = (
+  const mediaContent = media ? (
     <ProjectMedia src={media} alt={name} className={styles.teaser} />
-  );
+  ) : null;
 
   const content = (
     <>
