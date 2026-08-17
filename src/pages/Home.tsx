@@ -2,6 +2,7 @@ import { ConnectIcons } from "@/components/ConnectIcons";
 import { ProjectCard } from "@/components/ProjectCard";
 import { Link } from "react-router-dom";
 import {
+  chatProjectDetails,
   cregProjectDetails,
   crtsProjectDetails,
   elevatorProjectDetails,
@@ -43,6 +44,11 @@ export default function Home() {
           descShort={crtsProjectDetails.descriptionShort}
           media={crtsProjectDetails.media}
           redirect="projects/crts.io"
+        />
+        <ProjectCard
+          name={chatProjectDetails.name}
+          descShort={chatProjectDetails.descriptionShort}
+          redirect="projects/chat"
         />
         <ProjectCard
           name={searchEngineProjectDetails.name}

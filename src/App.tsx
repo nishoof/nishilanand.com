@@ -1,5 +1,6 @@
 import HackathonLog from "@/pages/HackathonLog";
 import Home from "@/pages/Home";
+import Chat from "@/pages/projects/Chat";
 import Creg from "@/pages/projects/Creg";
 import Crts from "@/pages/projects/Crts";
 import Elevator from "@/pages/projects/Elevator";
@@ -24,6 +25,7 @@ export default function App() {
         <Route path="/projects/elevator" element={<Elevator />} />
         <Route path="/projects/newsflash" element={<Newsflash />} />
         <Route path="/projects/search-engine" element={<SearchEngine />} />
+        <Route path="/projects/chat" element={<Chat />} />
         <Route path="*" element={<Navigate to="/" replace />} />
       </Routes>
       <Analytics />

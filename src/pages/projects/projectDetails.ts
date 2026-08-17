@@ -54,3 +54,12 @@ export const searchEngineProjectDetails: ProjectDetails = {
     "A concurrent search engine built from scratch in Go. Crawls the web from a seed URL using a thousand worker threads while following robots.txt rules. Extracts words from the HTML and stores them in an inverted index (in-memory or SQLite). Search ranks documents by relevance against a search query using TF-IDF (Term Frequency-Inverse Document Frequency). Improved SQLite index performance using SQL journal-mode tuning, indexes, transactional batch flushes, and prepared statements. Also includes a simple web UI.",
   githubLink: "https://github.com/nishoof/search-engine",
 };
+
+export const chatProjectDetails: ProjectDetails = {
+  name: "chat",
+  descriptionShort:
+    "A real-time chat app (like Discord/Slack) built with 4 containerized microservices (Go, Java, NestJS, and Nginx). Deployed using Kubernetes on AWS EKS with Terraform.",
+  descriptionLong:
+    "A real-time chat application (like Discord/Slack). Split into four containerized microservices. The auth service is written in Go using Gin, and is responsible for handling Google OAuth and creating the JWT. The realtime chat service is written in TypeScript using NestJS and Socket.io, and is responsible for websocket messaging. The chat history service is written in Java using Spring Boot and JPA/Hibernate, and is responsible for storing messages in the database. The frontend service is a React frontend written in TypeScript, built with Vite, and served with Nginx. Everything is deployed on AWS. The microservices are deployed using Kubernetes on AWS EKS. The database is Postgres on AWS RDS. All infrastructure (EKS, RDS, VPC, Route53, etc.) is provisioned with Terraform (IaC), with multi-environment CI/CD for zero-downtime blue/green deployments. Observability (logging, metrics, and email alerts) is self-hosted using Prometheus, Grafana, and Loki.",
+  githubLink: "https://github.com/nishoof/chat",
+};
