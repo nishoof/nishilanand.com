@@ -63,3 +63,12 @@ export const chatProjectDetails: ProjectDetails = {
     "A real-time chat application (like Discord/Slack). Split into four containerized microservices. The auth service is written in Go using Gin, and is responsible for handling Google OAuth and creating the JWT. The realtime chat service is written in TypeScript using NestJS and Socket.io, and is responsible for websocket messaging. The chat history service is written in Java using Spring Boot and JPA/Hibernate, and is responsible for storing messages in the database. The frontend service is a React frontend written in TypeScript, built with Vite, and served with Nginx. Everything is deployed on AWS. The microservices are deployed using Kubernetes on AWS EKS. The database is Postgres on AWS RDS. All infrastructure (EKS, RDS, VPC, Route53, etc.) is provisioned with Terraform (IaC), with multi-environment CI/CD for zero-downtime blue/green deployments. Observability (logging, metrics, and email alerts) is self-hosted using Prometheus, Grafana, and Loki.",
   githubLink: "https://github.com/nishoof/chat",
 };
+
+export const launchpadProjectDetails: ProjectDetails = {
+  name: "Launchpad",
+  descriptionShort:
+    "An onboarding tool that analyzes a GitHub repo and generates a walkthrough video. 3rd Best Use of Tavus AI and 2nd Best Use of Windsurf at the AI Agents Hackathon at Cloudflare.",
+  descriptionLong:
+    "An onboarding tool that saves developer time. Pulls a GitHub codebase using the GitHub API, analyzes it with Google Gemini, and generates an onboarding video with Tavus AI that walks through the codebase. Won 3rd Best Use of Tavus AI and 2nd Best Use of Windsurf at the AI Agents Hackathon at Cloudflare! Made in March 2025.",
+  githubLink: "https://github.com/nishoof/cloudflare-hack",
+};

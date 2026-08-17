@@ -4,6 +4,7 @@ import Chat from "@/pages/projects/Chat";
 import Creg from "@/pages/projects/Creg";
 import Crts from "@/pages/projects/Crts";
 import Elevator from "@/pages/projects/Elevator";
+import Launchpad from "@/pages/projects/Launchpad";
 import Newsflash from "@/pages/projects/Newsflash";
 import SearchEngine from "@/pages/projects/SearchEngine";
 import { Analytics } from "@vercel/analytics/react";
@@ -26,6 +27,7 @@ export default function App() {
         <Route path="/projects/newsflash" element={<Newsflash />} />
         <Route path="/projects/search-engine" element={<SearchEngine />} />
         <Route path="/projects/chat" element={<Chat />} />
+        <Route path="/projects/launchpad" element={<Launchpad />} />
         <Route path="*" element={<Navigate to="/" replace />} />
       </Routes>
       <Analytics />

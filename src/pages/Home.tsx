@@ -6,6 +6,7 @@ import {
   cregProjectDetails,
   crtsProjectDetails,
   elevatorProjectDetails,
+  launchpadProjectDetails,
   newsflashProjectDetails,
   searchEngineProjectDetails,
 } from "./projects/projectDetails";
@@ -60,6 +61,11 @@ export default function Home() {
           descShort={cregProjectDetails.descriptionShort}
           media={cregProjectDetails.media}
           redirect="projects/creg"
+        />
+        <ProjectCard
+          name={launchpadProjectDetails.name}
+          descShort={launchpadProjectDetails.descriptionShort}
+          redirect="projects/launchpad"
         />
         <ProjectCard
           name={elevatorProjectDetails.name}
