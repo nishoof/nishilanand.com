@@ -6,6 +6,7 @@ import {
   crtsProjectDetails,
   elevatorProjectDetails,
   newsflashProjectDetails,
+  searchEngineProjectDetails,
 } from "./projects/projectDetails";
 
 export default function Home() {
@@ -38,16 +39,21 @@ export default function Home() {
       <div className="section">
         <h2>Featured Projects</h2>
         <ProjectCard
-          name={cregProjectDetails.name}
-          descShort={cregProjectDetails.descriptionShort}
-          media={cregProjectDetails.media}
-          redirect="projects/creg"
-        />
-        <ProjectCard
           name={crtsProjectDetails.name}
           descShort={crtsProjectDetails.descriptionShort}
           media={crtsProjectDetails.media}
           redirect="projects/crts.io"
+        />
+        <ProjectCard
+          name={searchEngineProjectDetails.name}
+          descShort={searchEngineProjectDetails.descriptionShort}
+          redirect="projects/search-engine"
+        />
+        <ProjectCard
+          name={cregProjectDetails.name}
+          descShort={cregProjectDetails.descriptionShort}
+          media={cregProjectDetails.media}
+          redirect="projects/creg"
         />
         <ProjectCard
           name={elevatorProjectDetails.name}

@@ -45,3 +45,12 @@ export const newsflashProjectDetails: ProjectDetails = {
   media: "/projectPreviews/newsflash.png",
   githubLink: "https://github.com/nishoof/newsflash",
 };
+
+export const searchEngineProjectDetails: ProjectDetails = {
+  name: "search engine",
+  descriptionShort:
+    "A concurrent search engine built from scratch in Go. Crawls pages using over a thousand threads, builds an inverted index, and ranks results using TF-IDF.",
+  descriptionLong:
+    "A concurrent search engine built from scratch in Go. Crawls the web from a seed URL using a thousand worker threads while following robots.txt rules. Extracts words from the HTML and stores them in an inverted index (in-memory or SQLite). Search ranks documents by relevance against a search query using TF-IDF (Term Frequency-Inverse Document Frequency). Improved SQLite index performance using SQL journal-mode tuning, indexes, transactional batch flushes, and prepared statements. Also includes a simple web UI.",
+  githubLink: "https://github.com/nishoof/search-engine",
+};
